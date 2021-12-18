@@ -13,12 +13,12 @@ fi
 #alias proff='unset ALL_PROXY'
 
 function pron() {
-    export HTTP_PROXY=http://127.0.0.1:7890
-    export HTTPS_PROXY=http://127.0.0.1:7890
+    export http_proxy=http://127.0.0.1:7890
+    export https_proxy=http://127.0.0.1:7890
 }
 function proff() {
-    unset http_PROXY
-    unset https_PROXY
+    unset http_proxy
+    unset https_proxy
 }
 
 #
