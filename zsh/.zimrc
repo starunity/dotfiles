@@ -52,9 +52,6 @@ zmodule zsh-users/zsh-history-substring-search
 # Oh My Zsh
 #
 
-# Use ohmyzsh directories aliases
-zmodule ohmyzsh/ohmyzsh --source lib/directories.zsh
-
 # Use ohmyzsh git aliases
 zmodule ohmyzsh/ohmyzsh --source plugins/git/git.plugin.zsh
 
