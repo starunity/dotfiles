@@ -27,6 +27,7 @@ function pron() {
   export http_proxy=http://127.0.0.1:7890
   export https_proxy=http://127.0.0.1:7890
 }
+
 function proff() {
   unset http_proxy
   unset https_proxy
