@@ -118,6 +118,11 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # Enable Proxy
 #pron
 
+# Install zoxide if missing.
+if (( ! ${+commands[zoxide]} )); then
+    command curl -sS https://webinstall.dev/zoxide | bash
+fi
+
 if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
   # Download zimfw script if missing.
   command mkdir -p ${ZIM_HOME}
