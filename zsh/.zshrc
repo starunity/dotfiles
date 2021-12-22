@@ -24,12 +24,12 @@ fpath+=~/.zfunc
 #alias proff='unset ALL_PROXY'
 
 function pron() {
-    export http_proxy=http://127.0.0.1:7890
-    export https_proxy=http://127.0.0.1:7890
+  export http_proxy=http://127.0.0.1:7890
+  export https_proxy=http://127.0.0.1:7890
 }
 function proff() {
-    unset http_proxy
-    unset https_proxy
+  unset http_proxy
+  unset https_proxy
 }
 
 #
@@ -120,7 +120,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 # Install zoxide if missing.
 if (( ! ${+commands[zoxide]} )); then
-    command curl -sS https://webinstall.dev/zoxide | bash
+  command curl -sS https://webinstall.dev/zoxide | bash
 fi
 
 if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
@@ -200,14 +200,14 @@ eval "$(zoxide init zsh)"
 
 # HSTR configuration - add this to ~/.zshrc
 if (( ${+commands[hstr]} )); then
-    alias hh=hstr                    # hh to be alias for hstr
-    setopt histignorespace           # skip cmds w/ leading space from history
-    export HSTR_CONFIG=hicolor       # get more colors
-    bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
+  alias hh=hstr                    # hh to be alias for hstr
+  setopt histignorespace           # skip cmds w/ leading space from history
+  export HSTR_CONFIG=hicolor       # get more colors
+  bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
 else
-    echo -n "[\033[33mWARNING\033[0m]: "
-    echo    "You don’t have HSTR shell history search tool"
-    echo    "Please refer to https://dvorka.github.io/hstr/ to install"
+  echo -n "[\033[33mWARNING\033[0m]: "
+  echo    "You don’t have HSTR shell history search tool"
+  echo    "Please refer to https://dvorka.github.io/hstr/ to install"
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
