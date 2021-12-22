@@ -6,6 +6,17 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 #
+# Environment variables
+#
+
+# PATH
+export PATH="/home/star/.local/bin:$PATH"
+
+# fpath
+fpath+=~/.zfunc
+
+
+#
 # Proxy
 #
 
@@ -148,16 +159,6 @@ bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
-
-#
-# Environment variables
-#
-
-# PATH
-export PATH="/home/star/.local/bin:$PATH"
-
-# fpath
-fpath+=~/.zfunc
 
 #
 # Alias
