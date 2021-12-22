@@ -124,6 +124,12 @@ if (( ! ${+commands[zoxide]} )); then
   command curl -sS https://webinstall.dev/zoxide | bash
 fi
 
+# Install fzf if missing.
+if [[ ! -e ${HOME}/.fzf ]] && (( ! ${+commands[fzf]} )); then
+  command git clone --depth 1 https://github.com/junegunn/fzf.git ${HOME}/.fzf
+  command bash ${HOME}/.fzf/install
+fi
+
 if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
   # Download zimfw script if missing.
   command mkdir -p ${ZIM_HOME}
@@ -213,3 +219,5 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
