@@ -23,6 +23,9 @@ zmodule exa
 # Manage multiple runtime versions with a single CLI tool
 zmodule asdf
 
+# Configures fzf to use fd or ripgrep for faster fetching of files and directories names.
+zmodule fzf
+
 #
 # Prompt
 #

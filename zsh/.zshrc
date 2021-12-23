@@ -173,6 +173,11 @@ if (( ! ${+commands[exa]} )); then
   fi
 fi
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
 if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
   # Download zimfw script if missing.
   command mkdir -p ${ZIM_HOME}
@@ -250,9 +255,4 @@ eval "$(zoxide init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
