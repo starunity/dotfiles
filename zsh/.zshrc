@@ -205,18 +205,6 @@ export PYTHON3_HOST_PROG="/usr/bin/python3"
 # zoxide
 eval "$(zoxide init zsh)"
 
-# HSTR configuration - add this to ~/.zshrc
-if (( ${+commands[hstr]} )); then
-  alias hh=hstr                    # hh to be alias for hstr
-  setopt histignorespace           # skip cmds w/ leading space from history
-  export HSTR_CONFIG=hicolor       # get more colors
-  bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
-else
-  echo -n "[\033[33mWARNING\033[0m]: "
-  echo    "You don’t have HSTR shell history search tool"
-  echo    "Please refer to https://dvorka.github.io/hstr/ to install"
-fi
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
