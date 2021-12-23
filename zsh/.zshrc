@@ -43,8 +43,7 @@ function proff() {
 }
 
 function procfg() {
-  command rm ${HOME}/.proxy.zsh
-  command source ${HOME}/.zshrc
+  command rm ${HOME}/.proxy.zsh && source ${HOME}/.zshrc
 }
 
 # 1. No proxy (default)"
