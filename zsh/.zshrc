@@ -235,8 +235,6 @@ alias pacman='pacman --color=auto'
 alias yay='yay --color=auto'
 
 # alias
-alias cat='bat'
-alias ccat='/bin/cat'
 alias tree='exa --tree'
 #alias vim='nvim'
 alias nf='neofetch | lolcat --seed=19'
