@@ -66,7 +66,7 @@ fi
 #
 
 # PATH
-export PATH="/home/star/.local/bin:$PATH"
+export PATH="${HOME}/.local/bin:${PATH}"
 
 # fpath
 fpath+=~/.zfunc
