@@ -131,6 +131,11 @@ if (( ! ${+commands[bat]} )); then
   command curl -sS https://webinstall.dev/bat | bash
 fi
 
+# fd
+if (( ! ${+commands[fd]} )); then
+  command curl -sS https://webinstall.dev/fd | bash
+fi
+
 # fzf
 if [[ ! -e ${HOME}/.fzf ]] && (( ! ${+commands[fzf]} )); then
   command git clone --depth 1 https://github.com/junegunn/fzf.git ${HOME}/.fzf
