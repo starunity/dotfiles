@@ -124,6 +124,11 @@ if (( ! ${+commands[zoxide]} )); then
   command curl -sS https://webinstall.dev/zoxide | bash
 fi
 
+# Install bat if missing.
+if (( ! ${+commands[bat]} )); then
+  command curl -sS https://webinstall.dev/bat | bash
+fi
+
 # Install fzf if missing.
 if [[ ! -e ${HOME}/.fzf ]] && (( ! ${+commands[fzf]} )); then
   command git clone --depth 1 https://github.com/junegunn/fzf.git ${HOME}/.fzf
@@ -235,3 +240,7 @@ eval "$(zoxide init zsh)"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
