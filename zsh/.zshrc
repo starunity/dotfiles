@@ -158,8 +158,8 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # Initialize modules
 # ------------------
 
-# Enable proxy if PROXY_METHOD=2 at installing plugins
-if (( $PROXY_METHOD == 2 )); then
+# Enable proxy if PROXY_METHOD=2/3 at installing plugins
+if (( $PROXY_METHOD == 2 || $PROXY_METHOD == 3)); then
   pron
 fi
 
