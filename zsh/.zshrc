@@ -119,23 +119,25 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # Enable Proxy
 #pron
 
-# Install zoxide if missing.
+# Automatic installation of command line tools
+
+# zoxide
 if (( ! ${+commands[zoxide]} )); then
   command curl -sS https://webinstall.dev/zoxide | bash
 fi
 
-# Install bat if missing.
+# bat
 if (( ! ${+commands[bat]} )); then
   command curl -sS https://webinstall.dev/bat | bash
 fi
 
-# Install fzf if missing.
+# fzf
 if [[ ! -e ${HOME}/.fzf ]] && (( ! ${+commands[fzf]} )); then
   command git clone --depth 1 https://github.com/junegunn/fzf.git ${HOME}/.fzf
   command bash ${HOME}/.fzf/install
 fi
 
-# Install exa if missing.
+# exa
 if (( ! ${+commands[exa]} )); then
   EXA_VERSION=$(curl -sSL https://api.github.com/repos/ogham/exa/releases/latest | grep 'tag_name' | sed -r 's/.*"tag_name".*"(.*)",.*/\1/')
   EXA_SYSTEM=$(uname)
