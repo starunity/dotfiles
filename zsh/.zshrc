@@ -186,7 +186,7 @@ if (( ! ${+commands[rg]} )); then
 fi
 
 # fzf
-if [[ ! -e ${HOME}/.fzf ]] && (( ! ${+commands[fzf]} )); then
+if [[ ! -e ${HOME}/.fzf.zsh ]] && (( ! ${+commands[fzf]} )); then
   command git clone --depth 1 https://github.com/junegunn/fzf.git ${HOME}/.fzf
   command bash ${HOME}/.fzf/install
 fi
