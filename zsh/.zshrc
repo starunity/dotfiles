@@ -162,6 +162,8 @@ if (( ! ${+commands[exa]} )); then
     command curl -fsSL -o ${STARUNITY_ZSH_CACHE}/exa.zip https://github.com/ogham/exa/releases/download/${EXA_VERSION}/exa-linux-armv7-${EXA_VERSION}.zip
   elif [[ "${EXA_SYSTEM}" == "Darwin" ]] && [[ "${EXA_ARCH}" == "x86_64" ]]; then
     command curl -fsSL -o ${STARUNITY_ZSH_CACHE}/exa.zip https://github.com/ogham/exa/releases/download/${EXA_VERSION}/exa-macos-x86_64-${EXA_VERSION}.zip
+  else
+    command echo "Your system cannot automatically install exa. Please install it according to the official website. https://the.exa.website/"
   fi
 
   if [[ -e ${STARUNITY_ZSH_CACHE}/exa.zip ]]; then
