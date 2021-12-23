@@ -46,9 +46,9 @@ function procfg() {
   command rm ${HOME}/.proxy.zsh && source ${HOME}/.zshrc
 }
 
-# 1. No proxy (default)"
-# 2. Proxy only when installing the plugin in ZSH"
-# 3. Always proxy"
+# 1. No proxy (default)
+# 2. Proxy only when installing the plugin in ZSH
+# 3. Always proxy
 export PROXY_METHOD=${PROXY_METHOD}
 EOF
 fi
