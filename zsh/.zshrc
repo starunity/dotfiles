@@ -130,6 +130,32 @@ if [[ ! -e ${HOME}/.fzf ]] && (( ! ${+commands[fzf]} )); then
   command bash ${HOME}/.fzf/install
 fi
 
+# Install exa if missing.
+if (( ! ${+commands[exa]} )); then
+  EXA_VERSION=$(curl -sSL https://api.github.com/repos/ogham/exa/releases/latest | grep 'tag_name' | sed -r 's/.*"tag_name".*"(.*)",.*/\1/')
+  EXA_SYSTEM=$(uname)
+  EXA_ARCH=$(uname -m)
+
+  STARUNITY_ZSH_CACHE="${HOME}/.cache/starunity-zsh"
+  command mkdir -p ${STARUNITY_ZSH_CACHE}
+
+  if [[ "${EXA_SYSTEM}" == "Linux" ]] && [[ "${EXA_ARCH}" == "x86_64" ]]; then
+    command curl -fsSL -o ${STARUNITY_ZSH_CACHE}/exa.zip https://github.com/ogham/exa/releases/download/${EXA_VERSION}/exa-linux-x86_64-${EXA_VERSION}.zip
+  elif [[ "${EXA_SYSTEM}" == "Linux" ]] && [[ "${EXA_ARCH}" == "armv7" ]]; then
+    command curl -fsSL -o ${STARUNITY_ZSH_CACHE}/exa.zip https://github.com/ogham/exa/releases/download/${EXA_VERSION}/exa-linux-armv7-${EXA_VERSION}.zip
+  elif [[ "${EXA_SYSTEM}" == "Darwin" ]] && [[ "${EXA_ARCH}" == "x86_64" ]]; then
+    command curl -fsSL -o ${STARUNITY_ZSH_CACHE}/exa.zip https://github.com/ogham/exa/releases/download/${EXA_VERSION}/exa-macos-x86_64-${EXA_VERSION}.zip
+  fi
+
+  if [[ -e ${STARUNITY_ZSH_CACHE}/exa.zip ]]; then
+    command mkdir -p ${STARUNITY_ZSH_CACHE}/exa
+    command unzip -d ${STARUNITY_ZSH_CACHE}/exa ${STARUNITY_ZSH_CACHE}/exa.zip
+    command install -Dm755 ${STARUNITY_ZSH_CACHE}/exa/bin/exa ${HOME}/.local/bin/exa
+    command install -Dm644 ${STARUNITY_ZSH_CACHE}/exa/completions/exa.zsh ${HOME}/.zfunc/_exa
+    command rm -rf ${STARUNITY_ZSH_CACHE}
+  fi
+fi
+
 if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
   # Download zimfw script if missing.
   command mkdir -p ${ZIM_HOME}
