@@ -136,6 +136,11 @@ if (( ! ${+commands[fd]} )); then
   command curl -sS https://webinstall.dev/fd | bash
 fi
 
+# Ripgrep
+if (( ! ${+commands[rg]} )); then
+  command curl -sS https://webinstall.dev/rg | bash
+fi
+
 # fzf
 if [[ ! -e ${HOME}/.fzf ]] && (( ! ${+commands[fzf]} )); then
   command git clone --depth 1 https://github.com/junegunn/fzf.git ${HOME}/.fzf
