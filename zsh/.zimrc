@@ -26,6 +26,9 @@ zmodule asdf
 # Configures fzf to use fd or ripgrep for faster fetching of files and directories names.
 zmodule fzf
 
+# Safe rm command
+zmodule mattmc3/zsh-safe-rm --use git
+
 #
 # Prompt
 #
