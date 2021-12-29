@@ -287,6 +287,8 @@ alias pacman='sudo pacman'
 alias wgon='sudo systemctl restart wg-quick@star-laptop.service'
 alias wgoff='sudo systemctl stop wg-quick@star-laptop.service'
 alias o='xdg-open'
+alias pbpaste='xclip -out -selection clipboard'
+alias pbcopy='xclip -selection clipboard'
 
 #
 # Extensions
