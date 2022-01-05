@@ -275,14 +275,13 @@ bindkey -M vicmd 'j' history-substring-search-down
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
-alias pacman='pacman --color=auto'
+alias pacman='sudo pacman --color=auto'
 alias yay='yay --color=auto'
 
 # alias
 alias tree='exa --tree'
 #alias vim='nvim'
 alias nf='neofetch | lolcat --seed=19'
-alias pacman='sudo pacman'
 alias wgon='sudo systemctl restart wg-quick@star-laptop.service'
 alias wgoff='sudo systemctl stop wg-quick@star-laptop.service'
 alias o='xdg-open'
