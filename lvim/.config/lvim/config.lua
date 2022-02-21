@@ -9,6 +9,8 @@ an executable
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 -- general
+vim.opt.relativenumber = true
+
 lvim.log.level = "warn"
 lvim.format_on_save = false
 -- For dark theme
@@ -142,7 +144,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- Additional Plugins
 lvim.plugins = {
-    {"Mofiqul/vscode.nvim"},
+  {"Mofiqul/vscode.nvim"},
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
@@ -150,5 +152,4 @@ lvim.plugins = {
 --   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
 -- }
 
-vim.opt.relativenumber = true
 
