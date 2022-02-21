@@ -20,6 +20,9 @@ vim.g.vscode_style = "dark"
 vim.g.vscode_italic_comment = 1
 lvim.colorscheme = "vscode"
 
+-- Enable debug
+lvim.builtin.dap.active = true
+
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
