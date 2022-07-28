@@ -11,6 +11,6 @@ git clone https://github.com/starunity/dotfiles
 cd dotfiles
 
 # Select the configuration file according to your needs
-stow -t ~ zsh spacevim
+stow -t ~ zsh lvim
 ```
 
