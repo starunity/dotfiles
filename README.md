@@ -1,16 +1,33 @@
 # StarUnity's Dotfiles
 
-My dotfiles on ArchLinux
+My dotfiles on MacOS/ArchLinux
 
 # Usage
 
-Make sure preinstalled stow
-
 ```shell
-git clone https://github.com/starunity/dotfiles
-cd dotfiles
+git clone https://github.com/starunity/dotfiles ~/.dotfiles
+cd ~/.dotfiles
 
 # Select the configuration file according to your needs
-stow -t ~ zsh lvim
+stow -t ~ zsh
 ```
 
+## zsh dependencies
+
+MacOS
+
+```shell
+brew install zoxide bat fd ripgrep exa
+```
+
+ArchLinux
+
+```shell
+sudo pacman -Sy zoxide bat fd ripgrep exa
+```
+
+Debian/Ubuntu
+
+```shell
+sudo apt install zoxide bat fd-find ripgrep exa
+```

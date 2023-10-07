@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
     # sed -i 's|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list
     
     apt-get update
-    apt-get -y install zsh stow unzip
+    apt-get -y install zsh stow unzip zoxide bat fd-find ripgrep exa
 
     runuser -l vagrant -c 'git clone https://github.com/starunity/dotfiles'
     runuser -l vagrant -c 'cp -rT ~/dotfiles/zsh/ ~'

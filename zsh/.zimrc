@@ -1,21 +1,23 @@
-# -------
+#
 # Modules
-# -------
+#
 
 # Sets sane Zsh built-in environment options.
 zmodule environment
+# Provides handy git aliases and functions.
+zmodule git
+# Applies correct bindkeys for input events.
+zmodule input
+# Sets a custom terminal title.
+zmodule termtitle
+# Utility aliases and functions. Adds colour to ls, grep and less.
+zmodule utility
 
 # Open git repository in current directory.
 zmodule paulirish/git-open
 
-# Applies correct bindkeys for input events.
-zmodule input
-
 # vi mode for zsh
 # zmodule jeffreytse/zsh-vi-mode
-
-# Sets a custom terminal title.
-zmodule termtitle
 
 # Aliases for exa
 zmodule exa
@@ -36,38 +38,38 @@ zmodule mattmc3/zsh-safe-rm --use git
 # Theme
 zmodule romkatv/powerlevel10k
 
-# Additional completion definitions for Zsh.
-zmodule zsh-users/zsh-completions
+#
+# Completion
+#
 
+# Additional completion definitions for Zsh.
+zmodule zsh-users/zsh-completions --fpath src
 # Enables and configures smart and extensive tab completion.
-# completion must be sourced after zsh-users/zsh-completions
+# completion must be sourced after all modules that add completion definitions.
 zmodule completion
 
-# Fish-like autosuggestions for Zsh.
-zmodule zsh-users/zsh-autosuggestions
+#
+# Modules that must be initialized last
+#
 
 # Fish-like syntax highlighting for Zsh.
 # zsh-users/zsh-syntax-highlighting must be sourced after completion
 zmodule zsh-users/zsh-syntax-highlighting
-
 # Fish-like history search (up arrow) for Zsh.
 # zsh-users/zsh-history-substring-search must be sourced after zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-history-substring-search
+# Fish-like autosuggestions for Zsh.
+zmodule zsh-users/zsh-autosuggestions
 
 #
 # Oh My Zsh
 #
 
-# Use ohmyzsh git aliases
-zmodule ohmyzsh/ohmyzsh --source plugins/git/git.plugin.zsh
-
-# Use ohmyzsh extract plugin
+# extract
 zmodule ohmyzsh/ohmyzsh --source plugins/extract/extract.plugin.zsh --fpath plugins/extract 
 
-# Use ohmyzsh cp plugin
+# cp
 zmodule ohmyzsh/ohmyzsh --source plugins/cp/cp.plugin.zsh
 
-# Use ohmyzsh sudo plugin
+# sudo
 zmodule ohmyzsh/ohmyzsh --source plugins/sudo/sudo.plugin.zsh
-
-
