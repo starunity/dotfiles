@@ -225,7 +225,7 @@ alias 8='cd -7'
 alias 9='cd -8'
 alias d='dirs -p | tac | head -n 10 | cat -n'
 
-alias tree='exa --tree'
+alias tree='eza --tree'
 alias nf='neofetch | lolcat --seed=19'
 
 #

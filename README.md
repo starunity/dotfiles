@@ -17,17 +17,17 @@ stow -t ~ zsh
 MacOS
 
 ```shell
-brew install stow zoxide bat fd ripgrep exa
+brew install stow zoxide bat fd ripgrep eza
 ```
 
 ArchLinux
 
 ```shell
-sudo pacman -Sy stow zoxide bat fd ripgrep exa
+sudo pacman -Sy stow zoxide bat fd ripgrep eza
 ```
 
 Debian/Ubuntu
 
 ```shell
-sudo apt install stow zoxide bat fd-find ripgrep exa
+sudo apt install stow zoxide bat fd-find ripgrep eza
 ```
